@@ -1,6 +1,6 @@
 {
   "name": "kenobi-ui",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "Plateo.io",
   "contributors": [
     {
@@ -37,8 +37,8 @@
     "test": "jest",
     "coverage": "jest --coverage",
     "build:types": "tsc --declaration --emitDeclarationOnly",
-    "build:commonjs": "BABEL_ENV=commonjs babel src --out-dir commonjs --extensions \".js,.ts,.tsx\" --ignore '**/stories','**/test' --source-maps inline",
-    "build:esm": "BABEL_ENV=esm babel src --out-dir esm --extensions \".js,.ts,.tsx\" --ignore '**/stories','**/test' --source-maps inline",
+    "build:commonjs": "BABEL_ENV=commonjs babel src --out-dir commonjs --extensions \".js,.ts,.tsx\" --ignore '**/stories','**/tests' --source-maps inline",
+    "build:esm": "BABEL_ENV=esm babel src --out-dir esm --extensions \".js,.ts,.tsx\" --ignore '**/stories','**/tests' --source-maps inline",
     "build": "concurrently --names 'commonjs,esm,types' 'npm run build:commonjs' 'npm run build:esm' 'npm run build:types'",
     "build-storybook": "build-storybook",
     "dev": "start-storybook -p 6006",
