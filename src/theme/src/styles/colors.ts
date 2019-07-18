@@ -1,6 +1,6 @@
-import palx from 'palx';
-
-export const palette = palx('#3452ff');
+const palette = {
+  base: '#3452ff',
+};
 
 const neutral = {
   lightest: '#F9F9FB',
@@ -24,58 +24,52 @@ const neutralScales = {
 };
 
 const blue = {
-  color: palette.indigo,
-  lightest: palette.indigo[2],
-  light: palette.indigo[6],
-  base: palette.base,
-  dark: palette.indigo[9],
+  lightest: '#dadfff',
+  light: '#8799ff',
+  base: '#3452ff',
+  dark: '#20329c',
 };
 
 const red = {
-  color: palette.red,
-  lightest: palette.red[2],
-  light: palette.red[4],
-  base: palette.red[7],
-  dark: palette.red[8],
+  lightest: '#ffd7dd',
+  light: '#ffaeba',
+  base: '#ff3a57',
+  dark: '#cd2a42',
 };
 
 const orange = {
-  color: palette.orange,
-  lightest: palette.orange[2],
-  light: palette.orange[4],
-  base: palette.orange[7],
-  dark: palette.orange[8],
+  lightest: '#ffd9c5',
+  light: '#ffb289',
+  base: '#d9692c',
+  dark: '#ac5323',
 };
 
 const yellow = {
-  color: palette.yellow,
-  lightest: palette.yellow[0],
-  light: palette.yellow[1],
-  base: palette.yellow[5],
-  dark: palette.yellow[7],
+  lightest: '#fffade',
+  light: '#ffef92',
+  base: '#cbb329',
+  dark: '#9b8920',
 };
 
 const green = {
-  color: palette.green,
-  lightest: palette.green[0],
-  light: palette.green[1],
-  base: palette.green[8],
-  dark: palette.green[9],
+  lightest: '#ebffe8',
+  light: '#baffae',
+  base: '#287c19',
+  dark: '#18490f',
 };
 
 const cyan = {
-  color: palette.cyan,
-  lightest: palette.cyan[0],
-  light: palette.cyan[2],
-  base: palette.cyan[6],
-  dark: palette.cyan[9],
+  lightest: '#e4fffb',
+  light: '#33fbde',
+  base: '#24b39e',
+  dark: '#0f473f',
 };
 
 const intent = {
   success: green.base,
-  info: palette.blue[7],
+  info: '#2992ca',
   danger: red.base,
-  warning: palette.orange[6],
+  warning: '#e66f2f',
 };
 
 const fills = {
@@ -113,7 +107,7 @@ const fills = {
   },
   purple: {
     color: 'white',
-    backgroundColor: palette.violet[7],
+    backgroundColor: '#6028c8',
   },
 };
 

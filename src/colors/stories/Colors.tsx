@@ -12,7 +12,7 @@ const Colors = () => {
           <Heading size={600}>{key[0]}</Heading>
           <Section>
             {Object.entries(key[1]).map((item, index) => {
-              return item[0] !== 'color' ? (
+              return (
                 <Content key={index}>
                   <ColorRectangle color={item[1]} />
                   <div
@@ -25,7 +25,7 @@ const Colors = () => {
                     <Paragraph>{item[1]}</Paragraph>
                   </div>
                 </Content>
-              ) : null;
+              );
             })}
           </Section>
         </div>
@@ -79,22 +79,22 @@ const Colors = () => {
       <StyledHeading size={800}>Text</StyledHeading>
       {Object.entries(colors.text).map((item, index) => {
         return item[0] !== 'none' ? (
-            <div style={{ marginTop: '1rem' }} key={index}>
-              <Section>
-                <Content key={index}>
-                  <ColorRectangle color={item[1]} />
-                  <div
-                      style={{
-                        display: 'flex',
-                        flexDirection: 'column',
-                        marginLeft: '1rem',
-                      }}>
-                    <Paragraph>{item[0]}</Paragraph>
-                    <Paragraph>{item[1]}</Paragraph>
-                  </div>
-                </Content>
-              </Section>
-            </div>
+          <div style={{ marginTop: '1rem' }} key={index}>
+            <Section>
+              <Content key={index}>
+                <ColorRectangle color={item[1]} />
+                <div
+                  style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    marginLeft: '1rem',
+                  }}>
+                  <Paragraph>{item[0]}</Paragraph>
+                  <Paragraph>{item[1]}</Paragraph>
+                </div>
+              </Content>
+            </Section>
+          </div>
         ) : null;
       })}
     </Wrapper>

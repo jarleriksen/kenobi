@@ -1,4 +1,4 @@
-import React  from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { Heading, Paragraph, theme } from 'kenobi-ui';
 
@@ -11,7 +11,7 @@ const Colors = () => {
           <Heading size={600}>{key[0]}</Heading>
           <Section>
             {Object.entries(key[1]).map((item, index) => {
-              return item[0] !== 'color' ? (
+              return (
                 <Content key={index}>
                   <ColorRectangle color={item[1]} />
                   <div
@@ -24,7 +24,7 @@ const Colors = () => {
                     <Paragraph>{item[1]}</Paragraph>
                   </div>
                 </Content>
-              ) : null;
+              );
             })}
           </Section>
         </div>
