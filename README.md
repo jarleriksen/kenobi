@@ -1,5 +1,11 @@
 # Kenobi by Plateo.io
 
+<div align="center">
+  <img src="https://circleci.com/gh/jarleriksen/kenobi/tree/master.svg?style=svg" alt="Kenobi Build Status" />
+  <br />
+  <br />
+</div>
+
 **Disclaimer: Kenobi is still under active development. Things will change.**
 
 - Built using Typescript.
