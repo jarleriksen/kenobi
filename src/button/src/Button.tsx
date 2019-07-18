@@ -5,7 +5,7 @@ import React, {
   ButtonHTMLAttributes,
 } from 'react';
 import { Spinner } from '../../spinner';
-import { ThemeContext } from '../../theme/ThemeConsumer';
+import { ThemeContext } from '../../theme/src/ThemeConsumer';
 import { Icon } from '../../icon';
 import ButtonWrapper from './ButtonWrapper';
 import ButtonContent from './ButtonContent';

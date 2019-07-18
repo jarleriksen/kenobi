@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { IconSvgPaths16, IconSvgPaths20 } from '@blueprintjs/icons';
-import { ThemeContext } from '../../theme/ThemeConsumer';
+import { ThemeContext } from '../../theme/src/ThemeConsumer';
 
 const SIZE_STANDARD = 16;
 const SIZE_LARGE = 20;

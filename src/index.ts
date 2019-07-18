@@ -11,7 +11,6 @@ export { Tooltip } from './tooltip';
 export { Spinner } from './spinner';
 export { Portal } from './portal';
 export { VisuallyHidden } from './visually-hidden';
-
 export { Text, Paragraph, Heading } from './typography';
-
 export { Intent, Appearance, Placement } from './constants';
+export { ThemeConsumer, ThemeContext, withTheme, theme } from './theme';

@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import styled from 'styled-components';
-import { colors } from '../../theme/styles';
+import { colors } from '../../theme/src/styles';
 import { Heading, Paragraph } from '../../typography';
 
 const Colors = () => {

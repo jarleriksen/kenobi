@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Overlay } from '../../overlay';
 import styled from 'styled-components';
-import { ThemeContext } from '../../theme/ThemeConsumer';
+import { ThemeContext } from '../../theme/src/ThemeConsumer';
 import { Heading, Paragraph } from '../../typography';
 import { Button } from '../../button';
 import { Icon } from '../../icon';

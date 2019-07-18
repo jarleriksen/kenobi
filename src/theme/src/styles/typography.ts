@@ -1,4 +1,4 @@
-import { colors } from '../styles';
+import { colors } from './index';
 
 const fontFamilies = {
   display: `"SF UI Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,

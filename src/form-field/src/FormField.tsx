@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Input } from '../../input';
 import { Icon } from '../../icon';
 import { Text, Paragraph } from '../../typography';
-import { ThemeContext } from '../../theme/ThemeConsumer';
+import { ThemeContext } from '../../theme/src/ThemeConsumer';
 
 export type FormFieldProps = {
   /**

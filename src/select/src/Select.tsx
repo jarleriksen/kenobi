@@ -1,7 +1,7 @@
 import React, { InputHTMLAttributes } from 'react';
 import ReactSelect, { CommonProps as ReactSelectProps } from 'react-select';
 import styled from 'styled-components';
-import { getTextStyle, getTextSizeForControlHeight } from '../../theme/helpers';
+import { getTextStyle, getTextSizeForControlHeight } from '../../theme/src/helpers';
 
 export interface SelectProps extends ReactSelectProps {
   /**

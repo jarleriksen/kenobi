@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import Dialog from '../src/Dialog';
 import Component from '@reach/component-component';
 import Button from '../../button/src/Button';
-import { getFontFamily } from '../../theme/helpers';
+import { getFontFamily } from '../../theme/src/helpers';
 
 storiesOf('dialog', module)
   .add('Dialog', () => {

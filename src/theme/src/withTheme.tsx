@@ -1,7 +1,7 @@
-import React from "react";
-import ThemeConsumer from "./ThemeConsumer";
+import React from 'react';
+import { ThemeConsumer } from './ThemeConsumer';
 
-const WithTheme = (WrappedComponent: any) => {
+export const withTheme = (WrappedComponent: any) => {
   return class extends React.Component {
     render() {
       return (
@@ -12,5 +12,3 @@ const WithTheme = (WrappedComponent: any) => {
     }
   };
 };
-
-export default WithTheme;

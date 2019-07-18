@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colors } from '../../theme/styles';
+import { colors } from '../../theme/src/styles';
 
 interface Props {
   size: number;

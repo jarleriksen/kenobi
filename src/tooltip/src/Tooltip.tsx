@@ -1,6 +1,6 @@
 import React, { useCallback, useContext, useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { ThemeContext } from '../../theme/ThemeConsumer';
+import { ThemeContext } from '../../theme/src/ThemeConsumer';
 import Transition from 'react-transition-group/Transition';
 import { Paragraph } from '../../typography';
 import { Portal } from '../../portal';
