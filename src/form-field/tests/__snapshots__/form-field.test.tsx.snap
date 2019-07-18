@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form Field it renders correct elements 1`] = `
+<div
+  class="sc-bxivhb kwamHj"
+  data-testid="kenobi-form-field"
+>
+  <label
+    class="sc-ifAKCX dxpRIg sc-bdVaJa feWKzF"
+    color="default"
+    data-testid="kenobi-form-field-label"
+    font-family="ui"
+    for=""
+    size="400"
+  >
+    A required text input field
+  </label>
+  <p
+    class="sc-EHOje hJqfXO sc-bwzfXH fcopls"
+    color="muted"
+    data-testid="kenobi-form-field-description"
+    size="400"
+  >
+    Text input description
+  </p>
+  <span>
+    Form Field
+  </span>
+  <div
+    class="sc-bZQynM fuFeTf"
+    data-testid="kenobi-form-field-error-message"
+  >
+    <svg
+      data-icon="error"
+      data-testid="kenobi-icon"
+      height="14"
+      style="margin-right: 8px; fill: #ff3a57;"
+      viewBox="0 0 16 16"
+      width="14"
+    >
+      <path
+        d="M7.99-.01c-4.42 0-8 3.58-8 8s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zm1 13h-2v-2h2v2zm0-3h-2v-7h2v7z"
+        fill-rule="evenodd"
+      />
+    </svg>
+    <p
+      class="sc-bwzfXH gqNhMU"
+      color="danger"
+      role="alert"
+      size="300"
+    >
+      This field is required
+    </p>
+  </div>
+</div>
+`;

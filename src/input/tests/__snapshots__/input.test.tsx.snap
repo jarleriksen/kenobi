@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input renders correctly 1`] = `
+<DocumentFragment>
+  <input
+    class="sc-bdVaJa kOtoB"
+    data-testid="kenobi-input"
+    name="test-input"
+  />
+</DocumentFragment>
+`;

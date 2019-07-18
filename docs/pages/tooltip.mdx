@@ -1,0 +1,122 @@
+---
+name: Tooltip
+route: /tooltip
+---
+
+import { Playground, Props } from 'docz';
+import Component from '@reach/component-component';
+import { Button, Tooltip, Icon } from '../../src';
+import Row from '../components/Row';
+
+# Tooltip
+
+## Details
+
+### Tooltips should only show tips or provide a little bit of further information. They should not hold any critical information.
+
+### `Tooltip` does not take any children to make developers think about the content they put inside the tooltip. However, you are still free to pass in any React components as the content.
+
+### If you want to show more meaningful content use an [Inline Dialog](/inline-dialog)
+
+## Usage
+
+<Playground>
+  <Tooltip
+    placement="bottom"
+    trigger={<Icon title="Edit" icon="edit" />}
+    content="Learn more about a feature"
+  />
+</Playground>
+
+### By default the Tooltip manages it own `isVisible` state.
+
+### If you want to manually show `Tooltip`, simply pass the `show` prop.
+
+### **Component is not part of Kenobi**
+
+<Playground>
+  <Component initialState={{ show: false }}>
+    {({ state, setState }) => (
+      <div style={{ display: 'flex', alignItems: 'center' }}>
+        <Button
+          onClick={() => setState({ show: !state.show })}
+          marginRight={16}>
+          Toggle show
+        </Button>
+        <Tooltip
+          placement="right"
+          show={state.show}
+          trigger={<Icon title="Edit" icon="edit" />}
+          content="Edit feature"
+        />
+      </div>
+    )}
+  </Component>
+</Playground>
+
+## Placing
+
+### There are quite a few options for placing the Tooltip.
+
+- auto-start
+- auto
+- auto-end
+- top-start
+- top
+- top-end
+- right-start
+- right
+- right-end
+- bottom-end
+- bottom
+- bottom-start
+- left-end
+- left
+- left-start
+
+### However, `top`, `bottom`, `left`, `right` will be the most useful.
+
+<Playground>
+  <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+    <Tooltip
+      placement="top"
+      trigger={
+        <Button>
+          <Icon title="Top" color="white" icon="arrow-up" />
+        </Button>
+      }
+      content="Top"
+    />
+    <Tooltip
+      placement="left"
+      trigger={
+        <Button>
+          <Icon title="left" color="white" icon="arrow-left" />
+        </Button>
+      }
+      content="Left"
+    />
+    <Tooltip
+      placement="right"
+      trigger={
+        <Button>
+          <Icon title="right" color="white" icon="arrow-right" />
+        </Button>
+      }
+      content="Right"
+    />
+    <Tooltip
+      placement="bottom"
+      trigger={
+        <Button>
+          <Icon title="bottom" color="white" icon="arrow-down" />
+        </Button>
+      }
+      content="Bottom"
+    />
+  </div>
+</Playground>
+
+## Props
+
+<Props of={Tooltip} />

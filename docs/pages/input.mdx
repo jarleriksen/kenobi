@@ -1,0 +1,37 @@
+---
+name: Input
+route: /input
+---
+
+import { Playground, Props } from 'docz';
+import { Input, TextField } from '../../src';
+
+# Input
+
+## Usage
+
+Input is a wrapper around the native `input` element with Kenobi theming.
+All native `input` props are accepted.
+
+<Playground>
+  <Input name="project_language" placeholder="Enter something" />
+</Playground>
+
+## Input Props
+
+<Props of={Input} />
+
+## TextField
+
+`TextField` wraps `Input` but allows for passing of additional information.
+
+<Playground>
+  <TextField
+    name="project_language"
+    label="A required text input field"
+    placeholder="Enter some text...."
+    description="Text input description"
+    isRequired
+    errorMessage="This field is required"
+  />
+</Playground>

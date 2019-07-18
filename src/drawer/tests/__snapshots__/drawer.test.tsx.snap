@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Drawer can autofocus another element 1`] = `<DocumentFragment />`;
+
+exports[`Drawer close button has focus when first opened 1`] = `<DocumentFragment />`;
+
+exports[`Drawer contains aria-labelledby 1`] = `<DocumentFragment />`;
+
+exports[`Drawer should be in portal when open 1`] = `<DocumentFragment />`;
+
+exports[`Drawer should not be in portal when closed 1`] = `<DocumentFragment />`;

@@ -1,0 +1,56 @@
+---
+name: Icon
+route: /icon
+---
+
+import { Playground, Props } from 'docz';
+import { Icon } from '../../src';
+import IconSearch from '../components/IconSearch';
+
+# Icon
+
+All Kenobi Icons comes from the [@blueprintjs/icons](https://blueprintjs.com/docs/#icons) package.
+Checkout their repo for information regarding license etc.
+
+All Icons render as an `SVG` element. You can therefore not use it as a button. Checkout [Button](/button) component instead.
+
+The Icon component is almost the same as Blueprint's.
+
+## Usage
+
+The default size for Icons are 16px. That size should fit most use cases.
+However, you can resize the Icon by giving the `size` prop.
+
+<Playground>
+  <Icon icon="build" marginRight={16} />
+  <Icon icon="endorsed" size={40} />
+</Playground>
+
+## Colours
+
+Presets: `default` `disabled` `selected`
+Intent: `success` `warning` `danger`
+
+You can also pass either an RGB value or HEX value instead of choosing a preset.
+
+You can also pass a `Title` to the Icon. You know, for accessibility reasons.
+
+<Playground>
+  <Icon title="Credit Card" icon="credit-card" color="default" marginRight={16} />
+  <Icon title="Download" icon="download" color="disabled" marginRight={16} />
+  <Icon title="Download" icon="download" color="selected" marginRight={16} />
+  <Icon title="Add awesomesauce" icon="add" color="primary" marginRight={16} />
+  <Icon title="Endorse Kenobi" icon="endorsed" color="success" marginRight={16} />
+  <Icon title="Warning" icon="warning-sign" color="warning" marginRight={16} />
+  <Icon title="Ban this guy" icon="ban-circle" color="danger" marginRight={16} />
+
+  <Icon icon="help" color="info" />
+</Playground>
+
+## Icons
+
+<IconSearch />
+
+## Props
+
+<Props of={Icon} />

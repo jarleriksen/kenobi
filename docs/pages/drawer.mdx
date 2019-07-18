@@ -1,0 +1,60 @@
+---
+name: Drawer
+route: /drawer
+---
+
+import { Playground, Props } from 'docz';
+import { Drawer, Button, Heading } from '../../src';
+import Component from '@reach/component-component';
+
+# Drawer
+
+### Accessible Dialog/Modal.
+
+### `Drawer` is a component that shows up on either the `right` or `left` side of the page overlaying any content.
+
+### The close icon contains a `Visually Hidden` element. This provides a text version of the icon to screen readers.
+
+## Usage
+
+<Playground>
+  <Component initialState={{ isOpen: false }}>
+    {({ setState, state }) => (
+      <React.Fragment>
+        <Drawer
+          isOpen={state.isOpen}
+          width={350}
+          onRequestClose={() => setState({ isOpen: false })}>
+          <Heading size={600}>Drawer Title</Heading>
+        </Drawer>
+        <Button onClick={() => setState({ isOpen: true })}>Show</Button>
+      </React.Fragment>
+    )}
+  </Component>
+</Playground>
+
+## Focusing
+
+### By default the close icon is always focused on opening.
+
+### If you want another element to be focused on opening, you can specify `data-autofocus` on the element.
+
+<Playground>
+  <Component initialState={{ isOpen: false }}>
+    {({ setState, state }) => (
+      <React.Fragment>
+        <Drawer
+          isOpen={state.isOpen}
+          width={350}
+          onRequestClose={() => setState({ isOpen: false })}>
+          <Button data-autofocus>Focused button</Button>
+        </Drawer>
+        <Button onClick={() => setState({ isOpen: true })}>Show</Button>
+      </React.Fragment>
+    )}
+  </Component>
+</Playground>
+
+## Props
+
+<Props of={Drawer} />

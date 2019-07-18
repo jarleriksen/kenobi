@@ -1,0 +1,67 @@
+---
+name: Select
+route: /select
+---
+
+import { Playground, Props } from 'docz';
+
+import { Select, SelectField, Paragraph, Input } from '../../src';
+import Component from '@reach/component-component';
+
+# Select
+
+### `Select` is basically just a wrapper around [react-select](https://github.com/JedWatson/react-select).
+
+### All `react-select` functionality will work as expected, if not please reach out!
+
+### `Select` provides Kenobi theming to `react-select`. The `SelectField` component provides Labels etc.
+
+### For a list of all available `react-select` props go to [Docs](https://react-select.com/props).
+
+## Usage
+
+This is a controlled example using `value` and `onChange`.
+
+<Playground>
+  <Component initialState={{ value: '', label: '' }}>
+    {({ state, setState }) => (
+      <React.Fragment>
+        <Select
+          name="icecream-flavours"
+          value={state}
+          options={[
+            { value: 'chocolate', label: 'Chocolate' },
+            { value: 'strawberry', label: 'Strawberry' },
+            { value: 'vanilla', label: 'Vanilla' },
+          ]}
+          onChange={(e) => setState(e)}
+        />
+        <div style={{ marginTop: '1rem' }}>
+          <Paragraph>
+            {state.value
+              ? `You have chosen ${state.label}!`
+              : 'Please choose a flavour'}
+          </Paragraph>
+        </div>
+      </React.Fragment>
+    )}
+  </Component>
+</Playground>
+
+## Multi select
+
+This is an uncontrolled example. You will have to provide `value` and `onChange` to make it controlled.
+
+<Playground>
+  <Select
+    isMulti
+    name="icecream-flavours"
+    options={[
+      { value: 'chocolate', label: 'Chocolate' },
+      { value: 'strawberry', label: 'Strawberry' },
+      { value: 'vanilla', label: 'Vanilla' },
+      { value: 'pistachio', label: 'Pistachio' },
+      { value: 'cookies-and-cream', label: 'Cookies & Cream' },
+    ]}
+  />
+</Playground>

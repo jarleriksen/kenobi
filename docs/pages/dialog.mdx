@@ -1,0 +1,88 @@
+---
+name: Dialog
+route: /dialog
+---
+
+import { Playground, Props } from 'docz';
+import { Dialog, Button } from '../../src';
+import Component from '@reach/component-component';
+
+# Dialog
+
+### Accessible Dialog/Modal.
+
+## Implementation details
+
+### By default aria-label will be set as the `dialogTitle` prop.
+
+### You can control this by passing the `ariaLabel` prop. If none have been passed, aria-label will contain nothing.
+
+### Please always use one or the other.
+
+### The close icon contains a `Visually Hidden` element. This provides a text version of the icon to screen readers.
+
+### All scrolling outside the Dialog is disabled. Focus is locked inside the Dialog window. Focus will also be returned to the Trigger element.
+
+## Usage
+
+<Playground>
+  <Component initialState={{ isOpen: false }}>
+    {({ setState, state }) => (
+      <div>
+        <Button onClick={() => setState({ isOpen: true })}>Open Dialog</Button>
+        <Dialog
+          isOpen={state.isOpen}
+          dialogTitle="Dialog title"
+          onRequestClose={() => setState({ isOpen: false })}>
+          <div style={{ height: '400px' }}>Dialog content</div>
+        </Dialog>
+      </div>
+    )}
+  </Component>
+</Playground>
+
+## Focusing
+
+### By default the close icon is always focused on opening.
+
+### If you want another element to be focused on opening, you can specify `data-autofocus` on the element.
+
+<Playground>
+  <Component initialState={{ isOpen: false }}>
+    {({ setState, state }) => (
+      <div>
+        <Button onClick={() => setState({ isOpen: true })}>Open Dialog</Button>
+        <Dialog
+          isOpen={state.isOpen}
+          dialogTitle="Dialog title"
+          onRequestClose={() => setState({ isOpen: false })}>
+          <div style={{ height: '1200px' }}>
+            <Button data-autofocus>Dialog content</Button>
+          </div>
+        </Dialog>
+      </div>
+    )}
+  </Component>
+</Playground>
+
+## Internal scrolling
+
+<Playground>
+  <Component initialState={{ isOpen: false }}>
+    {({ setState, state }) => (
+      <div>
+        <Button onClick={() => setState({ isOpen: true })}>Open Dialog</Button>
+        <Dialog
+          isOpen={state.isOpen}
+          dialogTitle="Dialog title"
+          onRequestClose={() => setState({ isOpen: false })}>
+          <div style={{ height: '1200px' }}>Dialog content</div>
+        </Dialog>
+      </div>
+    )}
+  </Component>
+</Playground>
+
+## Props
+
+<Props of={Dialog} />

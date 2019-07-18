@@ -1,0 +1,236 @@
+---
+name: Inline Dialog
+route: /inline-dialog
+---
+
+import { Playground, Props } from 'docz';
+import { InlineDialog, Button, Text, Input } from '../../src';
+
+# Inline Dialog
+
+### Compared to Tooltip `Inline Dialog` does take children as props. This is because it's designed to hold more complex components.
+
+## Usage
+
+<Playground>
+  <InlineDialog
+    placement="bottom"
+    width={240}
+    height={240}
+    trigger={<Button>Button Trigger</Button>}>
+    <div
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '100%',
+      }}>
+      <Text>Wooo! I'm inside a dialog!</Text>
+    </div>
+  </InlineDialog>
+</Playground>
+
+## Focusing
+
+### `Inline Dialog` will automatically focus the first tabbable element in the its body.
+
+<Playground>
+  <InlineDialog
+    placement="bottom"
+    width={240}
+    height={240}
+    trigger={<Button>Button Trigger</Button>}>
+    <div
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '100%',
+      }}>
+      <Button>Tabbable button</Button>
+    </div>
+  </InlineDialog>
+</Playground>
+
+### If you want to auto focus a specific element instead of the first tabbable element. You have to pass `data-autofocus` to the element.
+
+<Playground>
+  <InlineDialog
+    placement="bottom"
+    width={240}
+    height={240}
+    trigger={<Button>Button Trigger</Button>}>
+    <div
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexDirection: 'column',
+        height: '100%',
+      }}>
+      <Button style={{ marginBottom: '8px' }}>Tabbable button</Button>
+      <Button data-autofocus>Tabbable button</Button>
+    </div>
+  </InlineDialog>
+</Playground>
+
+## Placing
+
+### There are quite a few options for placing the Tooltip.
+
+- auto-start
+- auto
+- auto-end
+- top-start
+- top
+- top-end
+- right-start
+- right
+- right-end
+- bottom-end
+- bottom
+- bottom-start
+- left-end
+- left
+- left-start
+
+<Playground>
+  <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '3rem' }}>
+    <InlineDialog
+      placement="top-start"
+      width={240}
+      height={240}
+      trigger={<Button>TOP START</Button>}>
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          height: '100%',
+        }}>
+        <Text>TOP START</Text>
+      </div>
+    </InlineDialog>
+
+    <InlineDialog
+      placement="top"
+      width={240}
+      height={240}
+      trigger={<Button>TOP</Button>}>
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          height: '100%',
+        }}>
+        <Text>TOP START</Text>
+      </div>
+    </InlineDialog>
+
+    <InlineDialog
+      placement="top-end"
+      width={240}
+      height={240}
+      trigger={<Button>TOP END</Button>}>
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          height: '100%',
+        }}>
+        <Text>TOP END</Text>
+      </div>
+    </InlineDialog>
+
+  </div>
+  <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '3rem' }}>
+    <InlineDialog
+      placement="right"
+      width={240}
+      height={240}
+      trigger={<Button>RIGHT</Button>}>
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          height: '100%',
+        }}>
+        <Text>RIGHT</Text>
+      </div>
+    </InlineDialog>
+        
+    <InlineDialog
+      placement="left"
+      width={240}
+      height={240}
+      trigger={<Button>LEFT</Button>}>
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          height: '100%',
+        }}>
+        <Text>LEFT</Text>
+      </div>
+    </InlineDialog>
+
+  </div>
+  <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '3rem' }}>
+    <InlineDialog
+      placement="bottom-start"
+      width={240}
+      height={240}
+      trigger={<Button>BOTTOM START</Button>}>
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          height: '100%',
+        }}>
+        <Text>BOTTOM START</Text>
+      </div>
+    </InlineDialog>
+
+    <InlineDialog
+      placement="bottom"
+      width={240}
+      height={240}
+      trigger={<Button>BOTTOM</Button>}>
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          height: '100%',
+        }}>
+        <Text>BOTTOM</Text>
+      </div>
+    </InlineDialog>
+
+    <InlineDialog
+      placement="bottom-end"
+      width={240}
+      height={240}
+      trigger={<Button>BOTTOM END</Button>}>
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          height: '100%',
+        }}>
+        <Text>BOTTOM END</Text>
+      </div>
+    </InlineDialog>
+
+  </div>
+</Playground>
+
+## Props
+
+<Props of={InlineDialog} />

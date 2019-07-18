@@ -1,0 +1,127 @@
+---
+name: Button
+route: /button
+---
+
+import { Playground, Props } from 'docz';
+import styled from 'styled-components';
+import { Button } from '../../src';
+import { Input } from '../../src';
+import PurpleButton from '../components/PurpleButton';
+import Row from '../components/Row';
+import Component from '@reach/component-component';
+
+# Button
+
+### `Button` is a base component of Kenobi. It can contain a label and an icon before or after the label.
+
+## Usage
+
+<Playground>
+  <Button>Base button</Button>
+</Playground>
+
+## Variations
+
+**Component and Row are not a part of Kenobi**
+
+<Playground>
+  <Component initialState={{ isLoading: false }}>
+    {({ state, setState }) => (
+      <React.Fragment>
+        <div style={{ marginBottom: '12px' }}>
+          <Button
+            onClick={() => setState({ isLoading: !state.isLoading })}
+            marginBottom={4}>
+            {state.isLoading ? 'Hide' : 'Show'} loading state
+          </Button>
+        </div>
+        <Row>
+          <Button marginRight={8} isLoading={state.isLoading}>
+            Default
+          </Button>
+          <Button intent="primary" marginRight={8} isLoading={state.isLoading}>
+            Primary
+          </Button>
+          <Button intent="success" marginRight={8} isLoading={state.isLoading}>
+            Success
+          </Button>
+          <Button intent="warning" marginRight={8} isLoading={state.isLoading}>
+            Warning
+          </Button>
+          <Button intent="danger" marginRight={8} isLoading={state.isLoading}>
+            Danger
+          </Button>
+          <Button marginRight={8} iconBefore="edit" isLoading={state.isLoading}>
+            Icon before
+          </Button>
+          <Button marginRight={8} iconAfter="edit" isLoading={state.isLoading}>
+            Icon after
+          </Button>
+        </Row>
+      </React.Fragment>
+    )}
+  </Component>
+</Playground>
+
+[More information on usage of Icons](/icon)
+
+## Sizing
+
+Default size for buttons are 32px.
+`Button` will handle its own scaling based on the height.
+
+<Playground>
+  <Row>
+    <Button height={24} marginRight={8}>
+      Height 24
+    </Button>
+    <Button height={32} marginRight={8}>
+      Height 32
+    </Button>
+    <Button height={40} marginRight={8}>
+      Height 40
+    </Button>
+    <Button height={48} marginRight={8}>
+      Height 48
+    </Button>
+    <Button height={56} marginRight={8}>
+      Height 56
+    </Button>
+  </Row>
+</Playground>
+
+## Usage as a link
+
+Due to using Styled-components as our CSS-in-JS library it is really simple to switch out the underlying
+HTML element. We just have to pass the prop **isLink** to the Button component.
+The button will pass the **as** prop to the Styled element.
+
+This will render the button as an **anchor** element.
+
+<Playground>
+  <Button isLink={true} href="/button#button-as-a-link">
+    I am a link!
+  </Button>
+</Playground>
+
+## Extending styles
+
+It's very easy to extend Button styles with styled-components. (Haven't tested any other solutions).
+
+<PurpleButton>I am now Purple!</PurpleButton>
+
+```jsx
+import styled from 'styled-components';
+import { Button } from 'kenobi-ui';
+
+const PurpleButton = styled(Button)`
+  background-color: #551a8b;
+`;
+
+<PurpleButton>I am now Purple!</PurpleButton>;
+```
+
+## Props
+
+<Props of={Button} />
