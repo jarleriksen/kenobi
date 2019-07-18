@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { IconNames } from '@blueprintjs/icons';
-import { Icon, Input, Text } from '../../src';
-import Row from './Row';
+import { Icon, Input, Text } from 'kenobi-ui';
 
 const iconKeys = Object.keys(IconNames);
 
