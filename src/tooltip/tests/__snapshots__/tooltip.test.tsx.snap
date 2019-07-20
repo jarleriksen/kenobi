@@ -3,7 +3,7 @@
 exports[`Tooltip Tooltip renders on mouseOver 1`] = `
 <DocumentFragment>
   <div
-    class="sc-ifAKCX eNrhVi"
+    class="sc-ifAKCX bqyzQp"
   >
     <div
       class="sc-EHOje eQYihx"
@@ -20,7 +20,7 @@ exports[`Tooltip Tooltip renders on mouseOver 1`] = `
 exports[`Tooltip Tooltip renders with manual show 1`] = `
 <DocumentFragment>
   <div
-    class="sc-ifAKCX eNrhVi"
+    class="sc-ifAKCX bqyzQp"
   >
     <div
       class="sc-EHOje eQYihx"
