@@ -36,11 +36,11 @@ export interface DialogProps extends DefaultProps {
    * If showHeader is true, show this title.
    * Will be used as aria-label if no custom label is given.
    */
-  dialogTitle?: string;
+  title?: string;
 
   /**
    * If set the aria-label will be set to this.
-   * Otherwise use dialogTitle or simply nothing.
+   * Otherwise use title or simply nothing.
    */
   ariaLabel?: string;
 
@@ -116,7 +116,7 @@ const Dialog = ({
 }: DialogProps) => {
   const themeContext = useContext(ThemeContext);
 
-  const { children, dialogTitle, ariaLabel, onRequestClose } = props;
+  const { children, title, ariaLabel, onRequestClose } = props;
 
   const sideOffsetWithUnit = Number.isInteger(sideOffset)
     ? `${sideOffset}px`
@@ -150,7 +150,7 @@ const Dialog = ({
         <DialogWrapper
           role="dialog"
           aria-modal="true"
-          aria-labelledby={ariaLabel || dialogTitle || ''}
+          aria-labelledby={ariaLabel || title || ''}
           theme={themeContext}
           width={width}
           maxWidth={maxWidth}
@@ -166,7 +166,7 @@ const Dialog = ({
             {showHeader && (
               <DialogHeader theme={themeContext}>
                 <Heading as="h4" size={600}>
-                  {dialogTitle}
+                  {title}
                 </Heading>
                 {hasClose && (
                   <DialogCloseIconWrapper>

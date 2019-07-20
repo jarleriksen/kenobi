@@ -13,7 +13,7 @@ import Component from '@reach/component-component';
 
 ## Implementation details
 
-### By default aria-label will be set as the `dialogTitle` prop.
+### By default aria-label will be set as the `title` prop.
 
 ### You can control this by passing the `ariaLabel` prop. If none have been passed, aria-label will contain nothing.
 
@@ -32,7 +32,7 @@ import Component from '@reach/component-component';
         <Button onClick={() => setState({ isOpen: true })}>Open Dialog</Button>
         <Dialog
           isOpen={state.isOpen}
-          dialogTitle="Dialog title"
+          title="Dialog title"
           onRequestClose={() => setState({ isOpen: false })}>
           <div style={{ height: '400px' }}>Dialog content</div>
         </Dialog>
@@ -54,7 +54,7 @@ import Component from '@reach/component-component';
         <Button onClick={() => setState({ isOpen: true })}>Open Dialog</Button>
         <Dialog
           isOpen={state.isOpen}
-          dialogTitle="Dialog title"
+          title="Dialog title"
           onRequestClose={() => setState({ isOpen: false })}>
           <div style={{ height: '1200px' }}>
             <Button data-autofocus>Dialog content</Button>
@@ -74,7 +74,7 @@ import Component from '@reach/component-component';
         <Button onClick={() => setState({ isOpen: true })}>Open Dialog</Button>
         <Dialog
           isOpen={state.isOpen}
-          dialogTitle="Dialog title"
+          title="Dialog title"
           onRequestClose={() => setState({ isOpen: false })}>
           <div style={{ height: '1200px' }}>Dialog content</div>
         </Dialog>

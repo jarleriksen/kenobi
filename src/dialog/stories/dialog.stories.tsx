@@ -18,7 +18,7 @@ storiesOf('dialog', module)
             </Button>
             <Dialog
               isOpen={state.isOpen}
-              dialogTitle="Dialog title"
+              title="Dialog title"
               onRequestClose={() => setState({ isOpen: false })}>
               <DialogWrapper>Dialog content</DialogWrapper>
             </Dialog>
@@ -37,7 +37,7 @@ storiesOf('dialog', module)
             </Button>
             <Dialog
               isOpen={state.isOpen}
-              dialogTitle="Dialog title"
+              title="Dialog title"
               onRequestClose={() => setState({ isOpen: false })}>
               <Wrapper fontFamily={getFontFamily('ui')}>
                 <Component initialState={{ isNestedOpen: false }}>
@@ -48,7 +48,7 @@ storiesOf('dialog', module)
                       </Button>
                       <Dialog
                         isOpen={state.isNestedOpen}
-                        dialogTitle="Dialog title"
+                        title="Dialog title"
                         shouldCloseOnEsc={false}
                         onRequestClose={() =>
                           setState({ isNestedOpen: false })

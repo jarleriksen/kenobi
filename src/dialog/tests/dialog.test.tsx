@@ -9,7 +9,7 @@ describe('Dialog', () => {
     const { getByTestId } = render(
       <Dialog
         isOpen={false}
-        dialogTitle="Dialog title"
+        title="Dialog title"
         onRequestClose={() => {}}>
         <div title="insideDialog" />
       </Dialog>,
@@ -27,7 +27,7 @@ describe('Dialog', () => {
     const { getByTestId } = render(
       <Dialog
         isOpen={true}
-        dialogTitle="Dialog title"
+        title="Dialog title"
         onRequestClose={() => {}}>
         <div title="insideDialog" />
       </Dialog>,
@@ -45,7 +45,7 @@ describe('Dialog', () => {
     const { getByTestId } = render(
       <Dialog
         isOpen={true}
-        dialogTitle="Dialog title"
+        title="Dialog title"
         onRequestClose={() => {}}>
         <div title="insideDialog" />
       </Dialog>,
@@ -58,7 +58,7 @@ describe('Dialog', () => {
     const { getByTestId } = render(
       <Dialog
         isOpen={true}
-        dialogTitle="Dialog title"
+        title="Dialog title"
         onRequestClose={() => {}}>
         <Button data-autofocus>Hello</Button>
       </Dialog>,
