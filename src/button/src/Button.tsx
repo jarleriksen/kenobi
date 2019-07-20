@@ -1,11 +1,6 @@
-import React, {
-  useContext,
-  Fragment,
-  AnchorHTMLAttributes,
-  ButtonHTMLAttributes,
-} from 'react';
+import React, { useContext, ButtonHTMLAttributes } from 'react';
 import { Spinner } from '../../spinner';
-import { ThemeContext } from '../../theme/src/ThemeConsumer';
+import { ThemeContext } from '../../theme';
 import { Icon } from '../../icon';
 import ButtonWrapper from './ButtonWrapper';
 import ButtonContent from './ButtonContent';

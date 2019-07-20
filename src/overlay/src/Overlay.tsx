@@ -1,8 +1,7 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import { Portal } from '../../portal';
 import Transition from 'react-transition-group/Transition';
-import styled from 'styled-components';
-import { ThemeContext } from '../../theme/src/ThemeConsumer';
+import { ThemeContext } from '../../theme';
 import FocusLock from 'react-focus-lock';
 import { RemoveScroll } from 'react-remove-scroll';
 import OverlayWrapper from './OverlayWrapper';

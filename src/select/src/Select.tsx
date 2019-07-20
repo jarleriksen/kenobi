@@ -1,7 +1,7 @@
-import React, { InputHTMLAttributes } from 'react';
+import React from 'react';
 import ReactSelect, { CommonProps as ReactSelectProps } from 'react-select';
 import styled from 'styled-components';
-import { getTextStyle, getTextSizeForControlHeight } from '../../theme/src/helpers';
+import { theme } from '../../theme';
 
 export interface SelectProps extends ReactSelectProps {
   /**
@@ -20,7 +20,7 @@ const SelectWrapper = styled.div<StyledProps>`
   z-index: 10;
 
   ${({ selectHeight }) =>
-    getTextStyle(getTextSizeForControlHeight(selectHeight))};
+    theme.getTextStyle(theme.getTextSizeForControlHeight(selectHeight))};
 `;
 
 const Select = ({ height = 32, ...props }: SelectProps) => {

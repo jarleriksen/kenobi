@@ -1,6 +1,6 @@
 import React, { useCallback, useContext, useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { ThemeContext } from '../../theme/src/ThemeConsumer';
+import { ThemeContext } from '../../theme';
 import Transition from 'react-transition-group/Transition';
 import { Paragraph } from '../../typography';
 import { Portal } from '../../portal';
@@ -34,12 +34,14 @@ export interface TooltipProps {
    */
   animationDuration?: number;
 
+  /**
+   * Offset from the trigger element
+   */
   offset?: number;
 }
 
 const TooltipContainer = styled.div`
   position: relative;
-  display: inline-flex;
 `;
 
 const TooltipTrigger = styled.div`

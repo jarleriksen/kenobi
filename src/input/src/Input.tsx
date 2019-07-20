@@ -1,6 +1,6 @@
-import React, { InputHTMLAttributes, useContext } from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
-import { ThemeContext } from '../../theme/src/ThemeConsumer';
+import { ThemeContext } from '../../theme';
 
 export interface InputProps
   extends React.InputHTMLAttributes<HTMLInputElement> {

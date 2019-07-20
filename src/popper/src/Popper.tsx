@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React from 'react';
 import { Popper as ReactPopper } from 'react-popper';
 
 export { Manager, Reference } from 'react-popper';

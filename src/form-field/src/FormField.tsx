@@ -1,9 +1,8 @@
-import React, { useContext, useState, useEffect } from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
-import { Input } from '../../input';
 import { Icon } from '../../icon';
 import { Text, Paragraph } from '../../typography';
-import { ThemeContext } from '../../theme/src/ThemeConsumer';
+import { ThemeContext } from '../../theme';
 
 export type FormFieldProps = {
   /**

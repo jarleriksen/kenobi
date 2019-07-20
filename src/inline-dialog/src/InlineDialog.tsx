@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
-import styled, { css } from 'styled-components';
-import { ThemeContext } from '../../theme/src/ThemeConsumer';
+import styled from 'styled-components';
+import { ThemeContext } from '../../theme';
 import InlineDialogContent from './InlineDialogContent';
 import FocusLock from 'react-focus-lock';
 import Transition from 'react-transition-group/Transition';

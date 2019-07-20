@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { colors } from '../../theme/src/styles';
 import { Heading, Paragraph } from '../../typography';

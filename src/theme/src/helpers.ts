@@ -1,6 +1,5 @@
 import { colors } from './styles';
 import Intent from '../../constants/src/Intent';
-import { Placement } from '../../constants';
 import { fontFamilies, headings, text, paragraphs } from './styles/typography';
 
 /**

@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
-import styled, { css } from 'styled-components';
-import { ThemeContext } from '../../theme/src/ThemeConsumer';
-import { getFontFamily } from '../../theme/src/helpers';
+import styled from 'styled-components';
+import { ThemeContext } from '../../theme';
 
 const defaultProps = {
   size: 400,

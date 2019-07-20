@@ -1,7 +1,7 @@
 import React, { useContext, Fragment } from 'react';
 import { Overlay } from '../../overlay';
 import DrawerWrapper from './DrawerWrapper';
-import { ThemeContext } from '../../theme/src/ThemeConsumer';
+import { ThemeContext } from '../../theme';
 import DrawerContent from './DrawerContent';
 import CloseIcon from './CloseIcon';
 
