@@ -45,9 +45,7 @@ const ButtonWrapper = styled.button<Props>`
   ${({ intent, theme }) => theme.getButtonAppearanceByIntent(intent)};
   ${({ buttonHeight, theme }) =>
     theme.getTextStyle(theme.getTextSizeForControlHeight(buttonHeight))};
-
-  box-shadow: ${({ theme }) =>
-    `inset 0 0 0 1px ${theme.colors.scales.neutral.N5A}, inset 0 -1px 1px 0 ${theme.colors.scales.neutral.N2A}`};
+  font-weight: 500;
 
   &:disabled {
     cursor: not-allowed;
