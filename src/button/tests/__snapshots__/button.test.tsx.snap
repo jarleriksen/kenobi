@@ -3,12 +3,12 @@
 exports[`Button it renders as an anchor tag 1`] = `
 <DocumentFragment>
   <a
-    class="sc-bwzfXH fokvxT"
+    class="sc-bwzfXH fEhUx"
     data-testid="kenobi-button"
     href="https://example.com"
   >
     <span
-      class="sc-htpNat jeMNHo"
+      class="sc-htpNat cDsWjj"
     >
       Hello!
     </span>
@@ -19,11 +19,11 @@ exports[`Button it renders as an anchor tag 1`] = `
 exports[`Button it renders correctly 1`] = `
 <DocumentFragment>
   <button
-    class="sc-bwzfXH fokvxT"
+    class="sc-bwzfXH fEhUx"
     data-testid="kenobi-button"
   >
     <span
-      class="sc-htpNat jeMNHo"
+      class="sc-htpNat cDsWjj"
     >
       Hello!
     </span>
@@ -34,11 +34,11 @@ exports[`Button it renders correctly 1`] = `
 exports[`Button it renders icon after 1`] = `
 <DocumentFragment>
   <button
-    class="sc-bwzfXH fokvxT"
+    class="sc-bwzfXH fEhUx"
     data-testid="kenobi-button"
   >
     <span
-      class="sc-htpNat jeMNHo"
+      class="sc-htpNat cDsWjj"
     >
       Hello!
       <svg
@@ -62,11 +62,11 @@ exports[`Button it renders icon after 1`] = `
 exports[`Button it renders icon before 1`] = `
 <DocumentFragment>
   <button
-    class="sc-bwzfXH fokvxT"
+    class="sc-bwzfXH fEhUx"
     data-testid="kenobi-button"
   >
     <span
-      class="sc-htpNat jeMNHo"
+      class="sc-htpNat cDsWjj"
     >
       <svg
         data-icon="edit"
@@ -90,7 +90,7 @@ exports[`Button it renders icon before 1`] = `
 exports[`Button it renders spinner 1`] = `
 <DocumentFragment>
   <button
-    class="sc-bwzfXH fokvxT"
+    class="sc-bwzfXH fEhUx"
     data-testid="kenobi-button"
     disabled=""
   >
@@ -100,7 +100,7 @@ exports[`Button it renders spinner 1`] = `
       size="16"
     />
     <span
-      class="sc-htpNat bqYOtN"
+      class="sc-htpNat klgOVq"
     >
       Hello!
     </span>

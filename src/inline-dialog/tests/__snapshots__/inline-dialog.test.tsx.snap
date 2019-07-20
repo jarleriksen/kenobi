@@ -12,11 +12,11 @@ exports[`Inline Dialog can focus element inside dialog 1`] = `
       role="button"
     >
       <button
-        class="sc-gzVnrw isFjnX"
+        class="sc-gzVnrw cJPjDm"
         data-testid="kenobi-button"
       >
         <span
-          class="sc-htoDjs fcMktC"
+          class="sc-htoDjs gPLHrW"
         >
           Open
         </span>
@@ -70,11 +70,11 @@ exports[`Inline Dialog should be in document on manual show 1`] = `
       role="button"
     >
       <button
-        class="sc-gzVnrw isFjnX"
+        class="sc-gzVnrw cJPjDm"
         data-testid="kenobi-button"
       >
         <span
-          class="sc-htoDjs fcMktC"
+          class="sc-htoDjs gPLHrW"
         >
           Open
         </span>
@@ -130,11 +130,11 @@ exports[`Inline Dialog should be in document when open 1`] = `
       role="button"
     >
       <button
-        class="sc-gzVnrw isFjnX"
+        class="sc-gzVnrw cJPjDm"
         data-testid="kenobi-button"
       >
         <span
-          class="sc-htoDjs fcMktC"
+          class="sc-htoDjs gPLHrW"
         >
           Open
         </span>

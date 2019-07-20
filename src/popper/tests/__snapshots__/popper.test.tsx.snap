@@ -3,11 +3,11 @@
 exports[`Popper renders children correctly 1`] = `
 <DocumentFragment>
   <button
-    class="sc-bwzfXH fokvxT"
+    class="sc-bwzfXH fEhUx"
     data-testid="kenobi-button"
   >
     <span
-      class="sc-htpNat jeMNHo"
+      class="sc-htpNat cDsWjj"
     >
       Inside Popper
     </span>
