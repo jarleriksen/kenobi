@@ -1,6 +1,6 @@
 {
   "name": "kenobi-ui",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "React UI Toolkit",
   "author": "Plateo.io",
   "contributors": [
@@ -41,7 +41,7 @@
     "build": "concurrently --names 'commonjs,esm,types' 'npm run build:commonjs' 'npm run build:esm' 'npm run build:types'",
     "build-storybook": "build-storybook",
     "dev": "start-storybook -p 6006",
-    "docz:deploy": "netlify deploy --dir=docs/.docz/dist --prod"
+    "docz:deploy": "cd ./docs && npm run docz:build && netlify deploy --dir=.docz/dist --prod"
   },
   "eslintConfig": {
     "extends": "react-app"
