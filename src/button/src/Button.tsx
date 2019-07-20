@@ -74,7 +74,7 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 const Button = ({
   isLink = false,
-  height = 32,
+  height = 36,
   intent = 'default',
   isLoading = false,
   ...props

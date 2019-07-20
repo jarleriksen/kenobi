@@ -12,7 +12,7 @@ storiesOf('Buttons', module).add('Common', () => (
         { label: 'Height 32', value: 32 },
         { label: 'Height 40', value: 40 },
       ],
-      value: 32,
+      value: 36,
     }}>
     {({ state, setState }) => (
       <>
