@@ -16,33 +16,30 @@ describe('Inline Dialog', () => {
     );
 
     expect(inlineDialog).not.toBeInTheDocument();
-    expect(asFragment()).toMatchSnapshot();
   });
 
   test('should be in document when open', () => {
-    const { getByTestId, asFragment, container } = render(
+    const { getByTestId } = render(
       <InlineDialog trigger={<Button>Open</Button>}>Test</InlineDialog>,
     );
 
     fireEvent.click(getByTestId('kenobi-button'));
 
     expect(getByTestId('kenobi-inline-dialog')).toBeInTheDocument();
-    expect(asFragment()).toMatchSnapshot();
   });
 
   test('should be in document on manual show', () => {
-    const { getByTestId, asFragment, container } = render(
+    const { getByTestId } = render(
       <InlineDialog show={true} trigger={<Button>Open</Button>}>
         sup
       </InlineDialog>,
     );
 
     expect(getByTestId('kenobi-inline-dialog')).toBeInTheDocument();
-    expect(asFragment()).toMatchSnapshot();
   });
 
   test('can focus element inside dialog', () => {
-    const { getByTestId, asFragment, container } = render(
+    const { getByTestId } = render(
       <InlineDialog trigger={<Button>Open</Button>}>
         <Input data-autofocus />
       </InlineDialog>,
@@ -51,6 +48,5 @@ describe('Inline Dialog', () => {
     fireEvent.click(getByTestId('kenobi-button'));
 
     expect(getByTestId('kenobi-input')).toHaveFocus();
-    expect(asFragment()).toMatchSnapshot();
   });
 });

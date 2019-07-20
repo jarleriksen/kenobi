@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Dialog can focus another element 1`] = `<DocumentFragment />`;
-
-exports[`Dialog close button has focus when first opened 1`] = `<DocumentFragment />`;
-
-exports[`Dialog should be in portal when open 1`] = `<DocumentFragment />`;
-
-exports[`Dialog should not be in portal when closed 1`] = `<DocumentFragment />`;

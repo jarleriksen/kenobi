@@ -6,7 +6,7 @@ import '@testing-library/jest-dom/extend-expect';
 
 describe('Dialog', () => {
   test('should not be in portal when closed', () => {
-    const { getByTestId, container, asFragment } = render(
+    const { getByTestId } = render(
       <Dialog
         isOpen={false}
         dialogTitle="Dialog title"
@@ -21,11 +21,10 @@ describe('Dialog', () => {
     );
 
     expect(portal).not.toContainElement(dialog);
-    expect(asFragment()).toMatchSnapshot();
   });
 
   test('should be in portal when open', () => {
-    const { getByTestId, container, asFragment } = render(
+    const { getByTestId } = render(
       <Dialog
         isOpen={true}
         dialogTitle="Dialog title"
@@ -40,11 +39,10 @@ describe('Dialog', () => {
     );
 
     expect(portal).toContainElement(dialog);
-    expect(asFragment()).toMatchSnapshot();
   });
 
   test('close button has focus when first opened', () => {
-    const { getByTestId, asFragment } = render(
+    const { getByTestId } = render(
       <Dialog
         isOpen={true}
         dialogTitle="Dialog title"
@@ -54,11 +52,10 @@ describe('Dialog', () => {
     );
 
     expect(getByTestId('kenobi-dialog-close-button')).toHaveFocus();
-    expect(asFragment()).toMatchSnapshot();
   });
 
   test('can focus another element', () => {
-    const { getByTestId, asFragment } = render(
+    const { getByTestId } = render(
       <Dialog
         isOpen={true}
         dialogTitle="Dialog title"
@@ -68,6 +65,5 @@ describe('Dialog', () => {
     );
 
     expect(getByTestId('kenobi-button')).toHaveFocus();
-    expect(asFragment()).toMatchSnapshot();
   });
 });

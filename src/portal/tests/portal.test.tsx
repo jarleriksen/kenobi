@@ -6,7 +6,7 @@ import '@testing-library/jest-dom/extend-expect';
 
 describe('Portal', () => {
   test('renders correctly', () => {
-    const { getByTestId, asFragment } = render(
+    const { getByTestId } = render(
       <Portal>
         <div>bup</div>
       </Portal>,
@@ -15,11 +15,10 @@ describe('Portal', () => {
     const portal = getByTestId('kenobi-portal');
 
     expect(portal).toBeInTheDocument();
-    expect(asFragment()).toMatchSnapshot();
   });
 
   test('renders children correctly', () => {
-    const { getByTestId, asFragment } = render(
+    const { getByTestId } = render(
       <Portal>
         <Button>Test</Button>
       </Portal>,
@@ -28,6 +27,5 @@ describe('Portal', () => {
     const button = getByTestId('kenobi-button');
 
     expect(button).toBeInTheDocument();
-    expect(asFragment()).toMatchSnapshot();
   });
 });

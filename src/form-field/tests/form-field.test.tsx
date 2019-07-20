@@ -1,12 +1,11 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import { FormField } from '../';
-import TextField from '../../input/src/TextField';
 import '@testing-library/jest-dom/extend-expect';
 
 describe('Form Field', () => {
   test('it renders correct elements', () => {
-    const { getByTestId, asFragment } = render(
+    const { getByTestId } = render(
       <FormField
         label="A required text input field"
         description="Text input description"
@@ -23,6 +22,5 @@ describe('Form Field', () => {
     expect(formField).toContainElement(label);
     expect(formField).toContainElement(description);
     expect(formField).toContainElement(errorMessage);
-    expect(formField).toMatchSnapshot();
   });
 });

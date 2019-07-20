@@ -5,7 +5,7 @@ import '@testing-library/jest-dom/extend-expect';
 
 describe('Tooltip', () => {
   test('Tooltip renders on mouseOver', () => {
-    const { getByTestId, asFragment, container } = render(
+    const { getByTestId } = render(
       <Tooltip content="I am a tooltip" trigger={<div>Hello</div>} />,
     );
 
@@ -14,11 +14,10 @@ describe('Tooltip', () => {
     });
 
     expect(getByTestId('kenobi-tooltip')).toBeInTheDocument();
-    expect(asFragment()).toMatchSnapshot();
   });
 
   test('Tooltip renders with manual show', () => {
-    const { getByTestId, asFragment, container } = render(
+    const { getByTestId } = render(
       <Tooltip
         show={true}
         content="I am a tooltip"
@@ -27,6 +26,5 @@ describe('Tooltip', () => {
     );
 
     expect(getByTestId('kenobi-tooltip')).toBeInTheDocument();
-    expect(asFragment()).toMatchSnapshot();
   });
 });

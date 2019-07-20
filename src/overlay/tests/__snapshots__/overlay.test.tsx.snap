@@ -1,5 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Overlay is in portal when open 1`] = `<DocumentFragment />`;
-
-exports[`Overlay is not in portal when closed 1`] = `<DocumentFragment />`;

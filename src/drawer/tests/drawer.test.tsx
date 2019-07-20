@@ -6,7 +6,7 @@ import '@testing-library/jest-dom/extend-expect';
 
 describe('Drawer', () => {
   test('should not be in portal when closed', () => {
-    const { getByTestId, container, asFragment } = render(
+    const { getByTestId } = render(
       <Drawer isOpen={false} onRequestClose={() => {}}>
         Content
       </Drawer>,
@@ -18,11 +18,10 @@ describe('Drawer', () => {
     );
 
     expect(portal).not.toContainElement(drawer);
-    expect(asFragment()).toMatchSnapshot();
   });
 
   test('should be in portal when open', () => {
-    const { getByTestId, asFragment } = render(
+    const { getByTestId } = render(
       <Drawer isOpen={true} onRequestClose={() => {}}>
         Content
       </Drawer>,
@@ -34,33 +33,30 @@ describe('Drawer', () => {
     );
 
     expect(portal).toContainElement(drawer);
-    expect(asFragment()).toMatchSnapshot();
   });
 
   test('close button has focus when first opened', () => {
-    const { getByTestId, asFragment } = render(
+    const { getByTestId } = render(
       <Drawer isOpen={true} onRequestClose={() => {}}>
         <div title="insideDrawer" />
       </Drawer>,
     );
 
     expect(getByTestId('kenobi-drawer-close-button')).toHaveFocus();
-    expect(asFragment()).toMatchSnapshot();
   });
 
   test('can autofocus another element', () => {
-    const { getByTestId, container, asFragment } = render(
+    const { getByTestId } = render(
       <Drawer isOpen={true} onRequestClose={() => {}}>
         <Button data-autofocus>Hello</Button>
       </Drawer>,
     );
 
     expect(getByTestId('kenobi-button')).toHaveFocus();
-    expect(asFragment()).toMatchSnapshot();
   });
 
   test('contains aria-labelledby', () => {
-    const { getByTestId, asFragment } = render(
+    const { getByTestId } = render(
       <Drawer isOpen={true} ariaLabel="test-drawer" onRequestClose={() => {}}>
         Content
       </Drawer>,
@@ -69,6 +65,5 @@ describe('Drawer', () => {
     const drawer = getByTestId('kenobi-drawer');
 
     expect(drawer).toHaveAttribute('aria-labelledby', 'test-drawer');
-    expect(asFragment()).toMatchSnapshot();
   });
 });

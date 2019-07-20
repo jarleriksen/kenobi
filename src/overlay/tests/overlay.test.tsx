@@ -5,7 +5,7 @@ import '@testing-library/jest-dom/extend-expect';
 
 describe('Overlay', () => {
   test('is in portal when open', () => {
-    const { getByTestId, asFragment } = render(
+    const { getByTestId } = render(
       <Overlay
         isOpen={true}
         childrenWrapperStyles={{}}
@@ -17,11 +17,10 @@ describe('Overlay', () => {
     );
 
     expect(getByTestId('kenobi-overlay')).toBeInTheDocument();
-    expect(asFragment()).toMatchSnapshot();
   });
 
   test('is not in portal when closed', () => {
-    const { getByTestId, asFragment } = render(
+    const { getByTestId } = render(
       <Overlay
         isOpen={false}
         childrenWrapperStyles={{}}
@@ -38,6 +37,5 @@ describe('Overlay', () => {
     );
 
     expect(portal).not.toContainElement(overlay);
-    expect(asFragment()).toMatchSnapshot();
   });
 });
