@@ -25,6 +25,7 @@ interface Props {
 
 const ButtonWrapper = styled.button<Props>`
   display: flex;
+  position: relative;
   justify-content: center;
   align-items: center;
   border-radius: 4px;
