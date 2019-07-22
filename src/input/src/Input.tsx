@@ -23,6 +23,7 @@ const InputElement = styled.input<StyledProps>`
   ${({ inputHeight, theme }) =>
     theme.getTextStyle(theme.getTextSizeForControlHeight(inputHeight))};
   height: ${({ inputHeight }) => inputHeight}px;
+  color: ${({ theme }) => theme.getTextColor('default')};
   box-sizing: border-box;
   border: none;
   border-radius: 4px;
