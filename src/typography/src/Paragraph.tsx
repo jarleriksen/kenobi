@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
-import { ThemeContext } from '../../theme/src/ThemeConsumer';
+import { ThemeContext } from '../../theme';
 
 type defaultProps = {
   size: number;
@@ -22,7 +22,7 @@ export interface ParagraphProps {
   /**
    * Text size of the Paragraph.
    */
-  size?: number;
+  size?: 300 | 400 | 500;
 
   /**
    * Custom color of the Paragraph.
