@@ -1,7 +1,9 @@
 import React from 'react';
-import ReactSelect, { CommonProps as ReactSelectProps } from 'react-select';
+import ReactSelect, { OptionProps, CommonProps } from 'react-select';
 import styled from 'styled-components';
 import { theme } from '../../theme';
+
+type ReactSelectProps = OptionProps & CommonProps;
 
 export interface SelectProps extends ReactSelectProps {
   /**

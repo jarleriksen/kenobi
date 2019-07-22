@@ -3,8 +3,6 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import styled from 'styled-components';
 import Component from '@reach/component-component';
-import { Button } from '../../button';
-import { Heading } from '../../typography';
 import { Select, SelectField } from '../../select';
 
 storiesOf('select', module)

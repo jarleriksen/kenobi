@@ -1,7 +1,9 @@
 import React from 'react';
-import { CommonProps as ReactSelectProps } from 'react-select/src/types';
+import { OptionProps, CommonProps } from 'react-select/src/types';
 import { FormField } from '../../form-field';
 import Select from './Select';
+
+type ReactSelectProps = OptionProps & CommonProps;
 
 export interface SelectFieldProps extends ReactSelectProps {
   /**
