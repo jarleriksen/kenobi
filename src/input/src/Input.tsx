@@ -45,7 +45,6 @@ const InputElement = styled.input<StyledProps>`
   &:disabled {
     cursor: not-allowed;
     background-color: ${({ theme }) => theme.colors.palette.neutral.lightest};
-    color: inherit;
   }
 `;
 

@@ -37,7 +37,7 @@ interface TextFieldProps extends InputHTMLAttributes<HTMLInputElement> {
   /**
    * Error message to show under the input
    */
-  errorMessage?: string;
+  errorMessage?: string | any;
 
   /**
    * If the field is required.
