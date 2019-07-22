@@ -17,6 +17,16 @@ interface Props {
   marginRight?: number;
 
   /**
+   * Padding Left
+   */
+  paddingLeft?: number;
+
+  /**
+   * Padding Right
+   */
+  paddingRight?: number;
+
+  /**
    * What's the intent of the button?
    * Default: default
    */
@@ -36,8 +46,8 @@ const ButtonWrapper = styled.button<Props>`
 
   min-height: ${({ buttonHeight }) => buttonHeight}px;
   max-height: ${({ buttonHeight }) => buttonHeight}px;
-  padding-right: ${({ buttonHeight }) => Math.round(buttonHeight / 2)}px;
-  padding-left: ${({ buttonHeight }) => Math.round(buttonHeight / 2)}px;
+  padding-right: ${({ paddingRight }) => paddingRight}px;
+  padding-left: ${({ paddingLeft }) => paddingLeft}px;
 
   transition: background 0.1s ease-out 0s,
     box-shadow 0.15s cubic-bezier(0.47, 0.03, 0.49, 1.38) 0s;
