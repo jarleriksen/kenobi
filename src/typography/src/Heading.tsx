@@ -19,7 +19,12 @@ export interface HeadingProps extends DefaultProps {
   /**
    * Size of the heading
    */
-  size?: number;
+  size?: 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900;
+
+  /**
+   * Custom color of the Heading.
+   */
+  color?: string;
 
   /**
    * The HTML tag or custom component that will be rendered.
@@ -32,18 +37,17 @@ interface StyledProps {
 }
 
 const Wrapper = styled.h2<StyledProps>`
-  flex: 1;
   margin: 0;
-
+  color: ${({ color, theme }) => theme.getTextColor(color)};
   ${({ size, theme }) => theme.getHeadingStyle(size)};
 `;
 
 const Heading = (props: HeadingProps) => {
   const themeContext = useContext(ThemeContext);
-  const { children, size, as } = props;
+  const { children, size, as, ...rest } = props;
 
   return (
-    <Wrapper theme={themeContext} as={as} size={size} {...props}>
+    <Wrapper theme={themeContext} as={as} size={size} {...rest}>
       {children}
     </Wrapper>
   );
