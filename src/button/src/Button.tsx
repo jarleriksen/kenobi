@@ -42,6 +42,16 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   marginRight?: number;
 
   /**
+   * Padding Left
+   */
+  paddingLeft?: number;
+
+  /**
+   * Padding Right
+   */
+  paddingRight?: number;
+
+  /**
    * Should this button be an anchor element
    */
   isLink?: boolean;
@@ -74,17 +84,28 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 const Button = ({
   isLink = false,
-  height = 36,
+  height = 32,
   intent = 'default',
   isLoading = false,
   ...props
 }: ButtonProps) => {
   const themeContext = useContext(ThemeContext);
 
-  const { children, disabled, iconBefore, iconAfter, ...rest } = props;
+  const {
+    children,
+    disabled,
+    iconBefore,
+    iconAfter,
+    paddingLeft,
+    paddingRight,
+    ...rest
+  } = props;
 
   const buttonStyles = themeContext.getButtonAppearanceByIntent(intent);
   const iconSize = themeContext.getIconSizeForButton(height);
+
+  const paddingL = paddingLeft !== undefined ? paddingLeft : Math.round(height / 2);
+  const paddingR = paddingRight !== undefined ? paddingRight : Math.round(height / 2);
 
   return (
     <ButtonWrapper
@@ -93,6 +114,8 @@ const Button = ({
       disabled={isLoading || disabled}
       buttonHeight={height}
       intent={intent}
+      paddingLeft={paddingL}
+      paddingRight={paddingR}
       data-testid="kenobi-button"
       {...rest}>
       {isLoading && <Spinner size={Math.round(height / 2)} />}
