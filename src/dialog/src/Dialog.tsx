@@ -85,16 +85,16 @@ const DialogContentWrapper = styled.div<{ minHeight?: number }>`
 const DialogHeader = styled.div`
   display: flex;
   align-items: center;
+  justify-content: space-between;
   border-bottom: 1px solid ${({ theme }) => theme.colors.palette.neutral.light};
   padding: 16px;
   flex-shrink: 0;
 `;
 
 const DialogCloseIconWrapper = styled.div`
-  border-radius: 100%;
-  width: 32px;
-
-  transition: background-color 200ms ease 0s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const DialogContent = styled.div`
@@ -169,16 +169,16 @@ const Dialog = ({
                   {title}
                 </Heading>
                 {hasClose && (
-                  <DialogCloseIconWrapper>
-                    <Button
-                      tabIndex={0}
-                      intent="none"
-                      onClick={onRequestClose}
-                      data-testid="kenobi-dialog-close-button">
-                      <VisuallyHidden>Close</VisuallyHidden>
-                      <Icon aria-hidden icon="cross" />
-                    </Button>
-                  </DialogCloseIconWrapper>
+                  <Button
+                    tabIndex={0}
+                    intent="none"
+                    onClick={onRequestClose}
+                    paddingLeft={0}
+                    paddingRight={0}
+                    data-testid="kenobi-dialog-close-button">
+                    <VisuallyHidden>Close</VisuallyHidden>
+                    <Icon aria-hidden icon="cross" />
+                  </Button>
                 )}
               </DialogHeader>
             )}
