@@ -29,7 +29,7 @@ export interface SelectFieldProps extends ReactSelectProps {
   /**
    * Error message to show under the Select
    */
-  errorMessage?: string;
+  errorMessage?: string | any;
 
   /**
    * If the field is required.
