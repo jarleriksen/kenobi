@@ -73,9 +73,9 @@ const Overlay = ({
   };
 
   return (
-    <Portal>
-      <Transition appear unmountOnExit timeout={ANIMATION_DURATION} in={isOpen}>
-        {(state) => (
+    <Transition appear unmountOnExit timeout={ANIMATION_DURATION} in={isOpen}>
+      {(state) => (
+        <Portal>
           <FocusLock returnFocus>
             <RemoveScroll>
               <OverlayWrapper
@@ -91,9 +91,9 @@ const Overlay = ({
               </OverlayWrapper>
             </RemoveScroll>
           </FocusLock>
-        )}
-      </Transition>
-    </Portal>
+        </Portal>
+      )}
+    </Transition>
   );
 };
 
