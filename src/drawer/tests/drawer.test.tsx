@@ -5,21 +5,6 @@ import { Button } from '../../button';
 import '@testing-library/jest-dom/extend-expect';
 
 describe('Drawer', () => {
-  test('should not be in portal when closed', () => {
-    const { getByTestId } = render(
-      <Drawer isOpen={false} onRequestClose={() => {}}>
-        Content
-      </Drawer>,
-    );
-
-    const portal = getByTestId('kenobi-portal');
-    const drawer: HTMLElement | null = document.querySelector(
-      '[data-testid="kenobi-drawer"]',
-    );
-
-    expect(portal).not.toContainElement(drawer);
-  });
-
   test('should be in portal when open', () => {
     const { getByTestId } = render(
       <Drawer isOpen={true} onRequestClose={() => {}}>

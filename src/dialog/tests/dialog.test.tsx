@@ -5,30 +5,9 @@ import { Button } from '../../button';
 import '@testing-library/jest-dom/extend-expect';
 
 describe('Dialog', () => {
-  test('should not be in portal when closed', () => {
-    const { getByTestId } = render(
-      <Dialog
-        isOpen={false}
-        title="Dialog title"
-        onRequestClose={() => {}}>
-        <div title="insideDialog" />
-      </Dialog>,
-    );
-
-    const portal = getByTestId('kenobi-portal');
-    const dialog: HTMLElement | null = document.querySelector(
-      '[data-testid="kenobi-dialog"]',
-    );
-
-    expect(portal).not.toContainElement(dialog);
-  });
-
   test('should be in portal when open', () => {
     const { getByTestId } = render(
-      <Dialog
-        isOpen={true}
-        title="Dialog title"
-        onRequestClose={() => {}}>
+      <Dialog isOpen={true} title="Dialog title" onRequestClose={() => {}}>
         <div title="insideDialog" />
       </Dialog>,
     );
@@ -43,10 +22,7 @@ describe('Dialog', () => {
 
   test('close button has focus when first opened', () => {
     const { getByTestId } = render(
-      <Dialog
-        isOpen={true}
-        title="Dialog title"
-        onRequestClose={() => {}}>
+      <Dialog isOpen={true} title="Dialog title" onRequestClose={() => {}}>
         <div title="insideDialog" />
       </Dialog>,
     );
@@ -56,10 +32,7 @@ describe('Dialog', () => {
 
   test('can focus another element', () => {
     const { getByTestId } = render(
-      <Dialog
-        isOpen={true}
-        title="Dialog title"
-        onRequestClose={() => {}}>
+      <Dialog isOpen={true} title="Dialog title" onRequestClose={() => {}}>
         <Button data-autofocus>Hello</Button>
       </Dialog>,
     );
