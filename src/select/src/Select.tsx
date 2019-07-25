@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import ReactSelect, { OptionProps, CommonProps } from 'react-select';
 import styled from 'styled-components';
-import { theme } from '../../theme';
+import { theme, ThemeContext } from '../../theme';
 
 type ReactSelectProps = OptionProps & CommonProps;
 
@@ -24,10 +24,26 @@ const SelectWrapper = styled.div<StyledProps>`
     theme.getTextStyle(theme.getTextSizeForControlHeight(selectHeight))};
 `;
 
+const customStyles = {
+  multiValue: (provided: any, state: any) => ({
+    ...provided,
+    fontSize: '14px',
+  }),
+  menu: (provided: any, state: any) => ({
+    ...provided,
+    zIndex: '5',
+  }),
+};
+
 const Select = ({ height = 32, ...props }: SelectProps) => {
+  const themeContext = useContext(ThemeContext);
+
   return (
-    <SelectWrapper data-testid="kenobi-select" selectHeight={height}>
-      <ReactSelect {...props} />
+    <SelectWrapper
+      data-testid="kenobi-select"
+      theme={themeContext}
+      selectHeight={height}>
+      <ReactSelect {...props} styles={customStyles} />
     </SelectWrapper>
   );
 };

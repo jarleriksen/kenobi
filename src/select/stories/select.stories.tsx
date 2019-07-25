@@ -4,7 +4,6 @@ import { storiesOf } from '@storybook/react';
 import styled from 'styled-components';
 import Component from '@reach/component-component';
 import { Select, SelectField } from '../../select';
-import { Button } from '../../button';
 
 storiesOf('select', module)
   .add('Select', () => {
