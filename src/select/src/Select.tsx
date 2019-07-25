@@ -18,7 +18,7 @@ interface StyledProps {
 
 const SelectWrapper = styled.div<StyledProps>`
   width: 100%;
-  height: ${({ selectHeight }) => selectHeight}px;
+  position: relative;
 
   ${({ selectHeight }) =>
     theme.getTextStyle(theme.getTextSizeForControlHeight(selectHeight))};
