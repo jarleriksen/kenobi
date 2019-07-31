@@ -38,8 +38,8 @@ interface StyledProps {
 
 const Wrapper = styled.h2<StyledProps>`
   margin: 0;
-  color: ${({ color, theme }) => theme.getTextColor(color)};
   ${({ size, theme }) => theme.getHeadingStyle(size)};
+  color: ${({ color, theme }) => theme.getTextColor(color)};
 `;
 
 const Heading = (props: HeadingProps) => {
