@@ -177,7 +177,7 @@ const InlineDialog = ({
         {trigger}
       </InlineDialogTrigger>
 
-      <Transition appear in={shown} timeout={120} unmountOnExit>
+      <Transition appear in={shown} timeout={50} unmountOnExit>
         {(state) => (
           <Popper placement={placement} referenceElement={triggerRef}>
             {({ ref, style }) => (

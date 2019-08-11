@@ -9,7 +9,7 @@ interface StyledProps {
   placement: string;
 }
 
-const ANIMATION_DURATION = 120;
+const ANIMATION_DURATION = 50;
 const distance = 8;
 
 const horizontalOffset = {
