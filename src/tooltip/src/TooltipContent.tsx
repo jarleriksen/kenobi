@@ -17,7 +17,7 @@ const TooltipContent = styled.div<Props>`
   background: ${({ theme }) => theme.colors.palette.neutral.transparentBase};
   padding: 4px 8px;
   text-decoration: none;
-  z-index: 10;
+  z-index: 30;
   border-radius: 4px;
 
   ${({ state }) => animations[state]};
