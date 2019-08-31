@@ -37,7 +37,7 @@ export interface InlineDialogProps {
   offset?: number;
 
   /**
-   * Manually show the Inline Dialog
+   * Manually control Inline Dialog state
    */
   show?: boolean;
 
@@ -116,10 +116,13 @@ const InlineDialog = ({
   };
 
   /**
-   * I'm pretty excited about these hooks
+   * Only register listeners if dialog state
+   * is handled internally.
    */
-  useEscapeListener(handleClose);
-  useEventListener('click', handleDialogClick);
+  if (show === undefined) {
+    useEscapeListener(handleClose);
+    useEventListener('click', handleDialogClick);
+  }
 
   useEffect(() => {
     setDialogCounter((idCounter++).toString());
