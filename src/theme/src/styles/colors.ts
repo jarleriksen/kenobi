@@ -83,7 +83,7 @@ const intent = {
 
 const fills = {
   none: {
-    color: 'inherit',
+    color: neutral.base,
     backgroundColor: 'transparent',
   },
   neutral: {
