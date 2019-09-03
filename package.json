@@ -33,7 +33,7 @@
     "react-transition-group": "^4.2.1"
   },
   "scripts": {
-    "test": "jest --watch",
+    "test": "jest",
     "coverage": "jest --coverage",
     "build:types": "tsc --declaration --emitDeclarationOnly",
     "build:commonjs": "BABEL_ENV=commonjs babel src --out-dir commonjs --extensions \".js,.ts,.tsx\" --ignore '**/stories','**/tests','./src/test-setup.ts' --source-maps inline",
