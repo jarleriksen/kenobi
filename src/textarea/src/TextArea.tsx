@@ -56,7 +56,7 @@ export interface TextAreaProps {
 
 const TextAreaElement = styled.textarea<TextAreaProps>`
   background: transparent;
-  min-height: ${({ minimumRows = 1 }) => 20 * minimumRows};
+  min-height: ${({ minimumRows = 1 }) => 20 * minimumRows}px;
   line-height: 1.5;
   max-width: 100%;
   width: 100%;
