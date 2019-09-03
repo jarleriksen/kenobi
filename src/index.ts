@@ -6,6 +6,7 @@ export { Overlay } from './overlay';
 export { Input, TextField, InputIcon } from './input';
 export { Select, SelectField } from './select';
 export { Icon } from './icon';
+export { Textarea } from './textarea';
 export { Button } from './button';
 export { Tooltip } from './tooltip';
 export { Spinner } from './spinner';
