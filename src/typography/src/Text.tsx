@@ -10,24 +10,29 @@ const defaultProps = {
 
 export interface TextProps {
   /**
-   * Content to render if component is not used as an Input
+   * Content to render if component is not used as an Input.
    */
   children?: string;
 
   /**
-   * Size of the text
+   * Size of the text.
    */
   size?: number;
 
   htmlFor?: string;
 
   /**
-   * Font Family
+   * Font Family.
    */
   fontFamily?: string;
 
   /**
-   * Colour of the Text
+   * Font weight of the text.
+   */
+  fontWeight?: number;
+
+  /**
+   * Colour of the Text.
    */
   color?: string;
 
@@ -41,6 +46,8 @@ const TextWrapper = styled.span<TextProps>`
   font-family: ${({ fontFamily, theme }) => theme.getFontFamily(fontFamily)};
   color: ${({ color, theme }) => theme.getTextColor(color)};
   ${({ size, theme }) => theme.getTextStyle(size)};
+
+  ${({ fontWeight }) => (fontWeight ? `font-weight: ${fontWeight};` : '')};
 `;
 
 const Text = (props: TextProps) => {
