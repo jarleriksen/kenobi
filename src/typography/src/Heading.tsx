@@ -2,15 +2,7 @@ import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { ThemeContext } from '../../theme';
 
-interface DefaultProps {
-  size?: number;
-}
-
-const defaultProps = {
-  size: 500,
-};
-
-export interface HeadingProps extends DefaultProps {
+export interface HeadingProps {
   /**
    * Heading text
    */
@@ -42,9 +34,9 @@ const Wrapper = styled.h2<StyledProps>`
   color: ${({ color, theme }) => theme.getTextColor(color)};
 `;
 
-const Heading = (props: HeadingProps) => {
+const Heading = ({ size = 500, ...props }: HeadingProps) => {
   const themeContext = useContext(ThemeContext);
-  const { children, size, as, ...rest } = props;
+  const { children, as, ...rest } = props;
 
   return (
     <Wrapper theme={themeContext} as={as} size={size} {...rest}>
@@ -52,7 +44,5 @@ const Heading = (props: HeadingProps) => {
     </Wrapper>
   );
 };
-
-Heading.defaultProps = defaultProps;
 
 export default Heading;
