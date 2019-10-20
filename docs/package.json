@@ -14,7 +14,7 @@
   "dependencies": {
     "docz": "^1.2.0",
     "docz-theme-default": "^1.2.0",
-    "kenobi-ui": "^0.1.17",
+    "kenobi-ui": "^0.1.25",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "styled-components": "^4.3.2"
