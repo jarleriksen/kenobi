@@ -101,7 +101,6 @@ const Colors = () => {
 };
 
 const Wrapper = styled.div`
-  height: 100vh;
   width: 100%;
   text-transform: capitalize;
 `;
