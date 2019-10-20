@@ -49,13 +49,17 @@ const ButtonWrapper = styled.button<Props>`
   padding-right: ${({ paddingRight }) => paddingRight}px;
   padding-left: ${({ paddingLeft }) => paddingLeft}px;
 
-  transition: background 0.1s ease-out 0s,
+  transition: all 0.1s ease-out 0s,
     box-shadow 0.15s cubic-bezier(0.47, 0.03, 0.49, 1.38) 0s;
 
   ${({ intent, theme }) => theme.getButtonAppearanceByIntent(intent)};
   ${({ buttonHeight, theme }) =>
     theme.getTextStyle(theme.getTextSizeForControlHeight(buttonHeight))};
   font-weight: 500;
+
+  &:hover {
+    opacity: 0.9;
+  }
 
   &:disabled {
     cursor: not-allowed;
