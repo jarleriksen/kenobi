@@ -3,9 +3,9 @@ name: Button
 route: /button
 ---
 
-import { Playground, Props } from 'docz';
+import { Playground } from 'docz';
 import styled from 'styled-components';
-import { Button, Input } from 'kenobi-ui';
+import Button from '../../src/button/src/Button.tsx';
 import PurpleButton from '../components/PurpleButton';
 import Row from '../components/Row';
 import Component from '@reach/component-component';
@@ -120,7 +120,3 @@ const PurpleButton = styled(Button)`
 
 <PurpleButton>I am now Purple!</PurpleButton>;
 ```
-
-## Props
-
-<Props of={Button} />
