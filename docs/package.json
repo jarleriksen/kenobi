@@ -13,7 +13,6 @@
     "typescript": "^3.6.4"
   },
   "dependencies": {
-    "docz-theme-default": "^1.2.0",
     "kenobi-ui": "^0.1.25",
     "re-resizable": "^6.1.0",
     "react": "^16.10.2",
