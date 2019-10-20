@@ -25,14 +25,13 @@ const InputElement = styled.input<StyledProps>`
   height: ${({ inputHeight }) => inputHeight}px;
   color: ${({ theme }) => theme.getTextColor('default')};
   box-sizing: border-box;
-  border: none;
+  border: 2px solid ${({ theme }) => theme.colors.palette.neutral.light};
   border-radius: 4px;
   background-color: white;
   padding-left: ${({ inputHeight }) => Math.round(inputHeight / 3.2)}px;
   padding-right: ${({ inputHeight }) => Math.round(inputHeight / 3.2)}px;
-  box-shadow: ${({ theme }) =>
-    `inset 0 0 0 1px ${theme.colors.scales.neutral.N5}, inset 0 1px 2px ${theme.colors.scales.neutral.N4}`};
   width: 100%;
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 
   &::placeholder {
     color: ${({ theme }) => theme.colors.scales.neutral.N6};
@@ -40,6 +39,8 @@ const InputElement = styled.input<StyledProps>`
 
   &:focus {
     z-index: 2;
+    outline: none;
+    border-color: ${({ theme }) => theme.colors.palette.blue.base};
   }
 
   &:disabled {

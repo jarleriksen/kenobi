@@ -63,7 +63,6 @@ const TextAreaElement = styled.textarea<TextAreaProps>`
   position: relative;
   border-radius: 4px;
   box-sizing: border-box;
-  max-width: 100%;
   padding: 10px;
   transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
   border: 2px solid ${({ theme }) => theme.colors.palette.neutral.light};
